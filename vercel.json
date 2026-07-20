@@ -2,5 +2,8 @@
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
     { "source": "/blog", "destination": "/blog.html" }
-  ]
+  ],
+  "toolbar": {
+    "enabled": false
+  }
 }
