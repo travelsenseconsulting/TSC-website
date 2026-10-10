@@ -593,14 +593,13 @@
   @media (max-width: 1024px) {
     .nav-hamburger { display: flex; }
     .nav-links {
-      display: none;
+      display: none !important;
       position: fixed; top: 0; left: 0; right: 0; bottom: 0;
       background: var(--cream); z-index: 150;
       flex-direction: column; align-items: center; justify-content: center;
       gap: 2.5rem; padding: 2rem;
-      pointer-events: none;
     }
-    .nav-links.open { display: flex; pointer-events: all; }
+    .nav-links.open { display: flex !important; }
     .nav-links a, .nav-links button {
       font-size: 1.5rem !important; letter-spacing: 0.1em;
       color: var(--ink) !important; font-family: var(--serif) !important;
@@ -695,28 +694,7 @@
     .footer-wordmark { font-size: 1.6rem !important; }
     .footer-tagline { font-size: 1.1rem !important; }
   }
-
-  @media (min-width: 1025px) {
-    .nav-hamburger { display: none !important; }
-    .nav-links { display: flex !important; position: static !important; background: none !important; flex-direction: row !important; pointer-events: all !important; }
-    .nav-links a, .nav-links button { font-size: 0.77rem !important; font-family: var(--sans) !important; font-weight: 400 !important; }
-  }
 </style>
-
-<!-- Google tag (gtag.js) - loads but stays inactive until consent given -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  // Default to denied until user consents
-  gtag('consent', 'default', {
-    'analytics_storage': 'denied'
-  });
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P4HEXR3F9K"></script>
-<script>
-  gtag('js', new Date());
-  gtag('config', 'G-P4HEXR3F9K');
-</script>
 </head>
 <body>
 
@@ -1507,94 +1485,6 @@
     btn.classList.remove('open');
     document.body.style.overflow = '';
     window.location.href = url;
-  }
-</script>
-
-<!-- ══ COOKIE CONSENT BANNER ══ -->
-<style>
-  .consent-banner {
-    display: none;
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
-    background: var(--ink); color: var(--cream);
-    padding: 1.25rem 3rem;
-    box-shadow: 0 -4px 24px rgba(0,0,0,0.2);
-    animation: slideUp 0.4s ease both;
-  }
-  .consent-banner.visible { display: block; }
-  @keyframes slideUp { from{transform:translateY(100%)} to{transform:translateY(0)} }
-  .consent-inner {
-    max-width: 1200px; margin: 0 auto;
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 2rem; flex-wrap: wrap;
-  }
-  .consent-text {
-    font-family: var(--sans); font-size: 0.82rem; font-weight: 300;
-    color: rgba(237,233,226,0.85); line-height: 1.6; flex: 1; min-width: 260px;
-  }
-  .consent-text strong { color: var(--cream); font-weight: 500; }
-  .consent-buttons { display: flex; gap: 0.75rem; flex-shrink: 0; flex-wrap: wrap; }
-  .consent-accept {
-    background: var(--green); color: #fff;
-    padding: 0.6rem 1.5rem; border: none; border-radius: 2px;
-    font-family: var(--sans); font-size: 0.75rem; font-weight: 500;
-    letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
-    transition: background 0.25s;
-  }
-  .consent-accept:hover { background: var(--green-dark); }
-  .consent-decline {
-    background: none; color: rgba(237,233,226,0.55);
-    padding: 0.6rem 1.5rem; border: 1px solid rgba(237,233,226,0.2); border-radius: 2px;
-    font-family: var(--sans); font-size: 0.75rem; font-weight: 400;
-    letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
-    transition: border-color 0.25s, color 0.25s;
-  }
-  .consent-decline:hover { border-color: rgba(237,233,226,0.5); color: var(--cream); }
-  @media (max-width: 768px) {
-    .consent-banner { padding: 1.25rem 1.5rem; }
-    .consent-inner { flex-direction: column; gap: 1rem; }
-    .consent-buttons { width: 100%; }
-    .consent-accept, .consent-decline { flex: 1; text-align: center; }
-  }
-</style>
-
-<div class="consent-banner" id="consentBanner">
-  <div class="consent-inner">
-    <p class="consent-text">
-      <strong>We use cookies.</strong> We use Google Analytics to understand how visitors use our site. 
-      No personal data is shared with third parties for advertising. 
-      By clicking "Accept", you consent to our use of analytics cookies in accordance with the EU GDPR and ePrivacy Directive.
-    </p>
-    <div class="consent-buttons">
-      <button class="consent-accept" onclick="acceptConsent()">Agree</button>
-      <button class="consent-decline" onclick="declineConsent()">Not Agree</button>
-    </div>
-  </div>
-</div>
-
-<script>
-  // Show banner if no consent decision stored
-  (function() {
-    if (!localStorage.getItem('cookieConsent')) {
-      document.getElementById('consentBanner').classList.add('visible');
-    } else if (localStorage.getItem('cookieConsent') === 'accepted') {
-      enableAnalytics();
-    }
-  })();
-
-  function enableAnalytics() {
-    gtag('consent', 'update', { 'analytics_storage': 'granted' });
-  }
-
-  function acceptConsent() {
-    localStorage.setItem('cookieConsent', 'accepted');
-    enableAnalytics();
-    document.getElementById('consentBanner').classList.remove('visible');
-  }
-
-  function declineConsent() {
-    localStorage.setItem('cookieConsent', 'declined');
-    gtag('consent', 'update', { 'analytics_storage': 'denied' });
-    document.getElementById('consentBanner').classList.remove('visible');
   }
 </script>
 </body>
