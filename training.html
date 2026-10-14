@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training — Travelsense Consulting</title>
+<meta name="description" content="Online training courses for tour guides, travel agents, and travel SME staff — developed and presented by Travelsense Consulting. Sustainability, customer service, and industry best practices.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.travelsenseconsulting.com/training.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.travelsenseconsulting.com/training.html">
+<meta property="og:title" content="Training — Travelsense Consulting">
+<meta property="og:description" content="Online training for tour guides, travel agents, and travel SME staff. Developed and presented by Travelsense Consulting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Google Analytics -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { 'analytics_storage': 'denied' });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P4HEXR3F9K"></script>
+<script>gtag('js', new Date()); gtag('config', 'G-P4HEXR3F9K');</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1814;
+    --ink-muted: #6b6760;
+    --ink-faint: #b8b5b0;
+    --cream: #f7f4ef;
+    --cream-warm: #ede9e2;
+    --green: #4aaa3a;
+    --green-dark: #347a27;
+    --green-light: #6abf5c;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--cream); color: var(--ink); overflow-x: hidden; line-height: 1.6; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.75rem 4rem;
+    background: #f7f4ef;
+    border-bottom: 1px solid rgba(184,180,176,0.2);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 0.3rem; text-decoration: none; }
+  .nav-wordmark { font-family: var(--serif); font-size: 2.4rem; font-weight: 500; letter-spacing: 0.05em; color: var(--ink); line-height: 1; }
+  .nav-wordmark span { color: var(--green); }
+  .nav-tagline { font-family: var(--serif); font-size: 1.55rem; color: var(--green); letter-spacing: 0.02em; font-style: italic; font-weight: 300; margin-top: 0.2rem; }
+
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { font-size: 0.77rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); text-decoration: none; transition: color 0.25s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--green); }
+  .nav-cta { color: var(--green) !important; border: 1px solid var(--green); padding: 0.45rem 1.2rem; border-radius: 2px; background: none; cursor: pointer; font-family: var(--sans); font-size: 0.77rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; transition: background 0.25s, color 0.25s !important; }
+  .nav-cta:hover { background: var(--green) !important; color: #fff !important; }
+
+  .nav-hamburger { display: none; flex-direction: column; justify-content: space-between; width: 28px; height: 20px; background: none; border: none; cursor: pointer; padding: 0; z-index: 200; }
+  .nav-hamburger span { display: block; width: 100%; height: 2px; background: var(--ink); border-radius: 2px; transition: all 0.3s; }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    padding: 9rem 8rem 5rem;
+    background: var(--ink);
+    position: relative; overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute; top: -80px; right: -40px;
+    width: 420px; height: 340px;
+    background: var(--green);
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    opacity: 0.06;
+  }
+  .page-header::after {
+    content: '';
+    position: absolute; bottom: -50px; right: 160px;
+    width: 260px; height: 210px;
+    background: rgba(255,255,255,0.03);
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    transform: rotate(-6deg);
+  }
+
+  .page-eyebrow {
+    font-size: 0.77rem; font-weight: 500; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--green); margin-bottom: 1.25rem;
+    display: flex; align-items: center; gap: 0.75rem; position: relative; z-index: 1;
+  }
+  .page-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--green); }
+
+  .page-title {
+    font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300; color: var(--cream); line-height: 1.05;
+    margin-bottom: 1rem; position: relative; z-index: 1;
+  }
+
+  .page-subtitle {
+    font-size: 1rem; font-weight: 300; color: rgba(237,233,226,0.65);
+    line-height: 1.8; max-width: 580px; position: relative; z-index: 1;
+  }
+
+  /* ── SECTION COMMONS ── */
+  .section-label {
+    font-size: 0.77rem; font-weight: 500; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--green); margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .section-label::before { content: ''; display: block; width: 22px; height: 1px; background: var(--green); }
+
+  /* ── COURSE CARD ── */
+  .courses-section { padding: 6rem 8rem; }
+
+  .courses-intro {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; margin-bottom: 4rem; align-items: end;
+  }
+
+  .courses-intro-title {
+    font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-weight: 300; line-height: 1.1; color: var(--ink);
+  }
+
+  .courses-intro-text { font-size: 0.97rem; font-weight: 300; color: var(--ink-muted); line-height: 1.8; }
+
+  /* Single course card — full width, prominent */
+  .course-card {
+    background: #fff;
+    border: 1px solid var(--cream-warm);
+    border-top: 4px solid var(--green);
+    border-radius: 2px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .course-card-left { padding: 3rem 3.5rem; border-right: 1px solid var(--cream-warm); }
+  .course-card-right { padding: 3rem 3.5rem; background: var(--cream); }
+
+  .course-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(74,170,58,0.1); color: var(--green-dark);
+    padding: 0.3rem 0.85rem; border-radius: 20px;
+    font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; margin-bottom: 1.5rem;
+  }
+  .course-badge::before { content: '●'; font-size: 0.5rem; }
+
+  .course-title {
+    font-family: var(--serif); font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 400; color: var(--ink); line-height: 1.15; margin-bottom: 1rem;
+  }
+
+  .course-desc {
+    font-size: 0.92rem; font-weight: 300; color: var(--ink-muted);
+    line-height: 1.8; margin-bottom: 2rem;
+  }
+
+  .course-cta {
+    display: inline-block;
+    background: var(--green); color: #fff;
+    padding: 0.85rem 2.25rem;
+    font-family: var(--sans); font-size: 0.77rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    border-radius: 2px; text-decoration: none;
+    transition: background 0.25s;
+  }
+  .course-cta:hover { background: var(--green-dark); }
+
+  .course-cta-note {
+    display: block; font-size: 0.72rem; color: var(--ink-faint);
+    margin-top: 0.75rem; letter-spacing: 0.04em;
+  }
+
+  /* Details list */
+  .course-details { list-style: none; display: flex; flex-direction: column; gap: 0; }
+
+  .course-details li {
+    display: grid; grid-template-columns: 140px 1fr;
+    gap: 1rem; padding: 0.85rem 0;
+    border-bottom: 1px solid var(--cream-warm);
+    font-size: 0.85rem;
+  }
+  .course-details li:first-child { padding-top: 0; }
+  .course-details li:last-child { border-bottom: none; }
+
+  .detail-label {
+    font-weight: 500; color: var(--ink); letter-spacing: 0.03em;
+    font-size: 0.78rem; text-transform: uppercase; padding-top: 0.1rem;
+  }
+  .detail-value { font-weight: 300; color: var(--ink-muted); line-height: 1.6; }
+
+  /* Curriculum preview */
+  .curriculum-section { padding: 5rem 8rem; background: var(--cream-warm); }
+
+  .curriculum-header { max-width: 560px; margin-bottom: 3rem; }
+  .curriculum-title { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.75rem); font-weight: 300; color: var(--ink); line-height: 1.1; margin-top: 0.5rem; }
+
+  .curriculum-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+
+  .curriculum-item {
+    background: #fff; padding: 2rem 2.25rem;
+    border-radius: 2px; border-left: 3px solid var(--green);
+    position: relative;
+  }
+
+  .curriculum-num {
+    font-family: var(--serif); font-size: 3rem; font-weight: 300;
+    color: var(--cream-warm); line-height: 1; margin-bottom: 0.5rem;
+  }
+  .curriculum-section-label {
+    font-size: 0.68rem; font-weight: 500; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--green); margin-bottom: 0.5rem;
+  }
+  .curriculum-item-title {
+    font-family: var(--serif); font-size: 1.2rem; font-weight: 400;
+    color: var(--ink); line-height: 1.2; margin-bottom: 0.6rem;
+  }
+  .curriculum-item-desc { font-size: 0.82rem; font-weight: 300; color: var(--ink-muted); line-height: 1.7; }
+
+  .curriculum-item-topics { list-style: none; margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.35rem; }
+  .curriculum-item-topics li { font-size: 0.78rem; font-weight: 300; color: var(--ink-muted); display: flex; align-items: flex-start; gap: 0.5rem; }
+  .curriculum-item-topics li::before { content: ''; display: block; width: 10px; height: 1px; background: var(--green); flex-shrink: 0; margin-top: 0.55rem; }
+
+  /* Who is it for */
+  .audience-section { padding: 5rem 8rem; background: var(--cream); }
+
+  .audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+
+  .audience-left {}
+
+  .audience-title { font-family: var(--serif); font-size: clamp(2rem, 3vw, 2.75rem); font-weight: 300; color: var(--ink); line-height: 1.15; margin-top: 0.5rem; margin-bottom: 1.25rem; }
+  .audience-body { font-size: 0.95rem; font-weight: 300; color: var(--ink-muted); line-height: 1.8; }
+
+  .audience-cards { display: flex; flex-direction: column; gap: 1rem; }
+
+  .audience-card {
+    display: flex; gap: 1.25rem; align-items: flex-start;
+    padding: 1.5rem 1.75rem;
+    background: var(--cream-warm); border-radius: 2px;
+  }
+  .audience-card-icon { font-size: 1.75rem; flex-shrink: 0; line-height: 1; }
+  .audience-card-title { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--ink); margin-bottom: 0.25rem; }
+  .audience-card-text { font-size: 0.82rem; font-weight: 300; color: var(--ink-muted); line-height: 1.65; }
+
+  /* Coming soon */
+  .coming-soon-section { padding: 5rem 8rem; background: var(--cream-warm); }
+  .coming-soon-inner { max-width: 680px; }
+  .coming-soon-title { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 300; color: var(--ink); line-height: 1.15; margin-top: 0.5rem; margin-bottom: 1.25rem; }
+  .coming-soon-body { font-size: 0.95rem; font-weight: 300; color: var(--ink-muted); line-height: 1.8; margin-bottom: 2rem; }
+
+  .coming-soon-tags { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .tag {
+    background: rgba(26,24,20,0.06); color: var(--ink-muted);
+    padding: 0.4rem 1rem; border-radius: 20px;
+    font-size: 0.75rem; font-weight: 400; letter-spacing: 0.06em;
+  }
+
+  /* CTA BAND */
+  .cta-band { background: var(--green-dark); padding: 5rem 8rem; display: flex; align-items: center; justify-content: space-between; gap: 3rem; position: relative; overflow: hidden; }
+  .cta-band::before { content: ''; position: absolute; right: -60px; top: -60px; width: 300px; height: 300px; background: rgba(255,255,255,0.07); clip-path: polygon(50% 0%, 100% 100%, 0% 100%); transform: rotate(15deg); }
+  .cta-band::after { content: ''; position: absolute; right: 100px; bottom: -80px; width: 200px; height: 200px; background: rgba(255,255,255,0.04); clip-path: polygon(50% 0%, 100% 100%, 0% 100%); transform: rotate(-8deg); }
+  .cta-band-title { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.75rem); font-weight: 300; color: #fff; max-width: 560px; line-height: 1.15; position: relative; z-index: 1; }
+  .cta-band-title em { font-style: italic; opacity: 0.78; }
+  .btn-white { background: #fff; color: var(--green-dark); padding: 0.9rem 2.25rem; font-family: var(--sans); font-size: 0.77rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: background 0.25s; display: inline-block; position: relative; z-index: 1; }
+  .btn-white:hover { background: var(--cream); }
+
+  /* FOOTER */
+  footer { background: var(--ink); padding: 2.5rem 4rem; display: flex; align-items: center; justify-content: space-between; }
+  .footer-brand { display: flex; align-items: center; gap: 0.75rem; }
+  .footer-wordmark { font-family: var(--serif); font-size: 2.2rem; font-weight: 400; color: var(--cream); letter-spacing: 0.05em; }
+  .footer-wordmark span { color: var(--green); }
+  .footer-tagline { font-family: var(--serif); font-size: 1.5rem; color: rgba(74,170,58,0.9); letter-spacing: 0.02em; font-style: italic; font-weight: 300; margin-top: 0.25rem; }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(237,233,226,0.4); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-contact-btn { background: none; border: none; cursor: pointer; font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(237,233,226,0.4); transition: color 0.2s; padding: 0; }
+  .footer-contact-btn:hover { color: var(--cream); }
+
+  /* MOBILE NAV */
+  @media (max-width: 1024px) {
+    .nav-hamburger { display: flex; }
+    .nav-links { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--cream); z-index: 150; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; padding: 2rem; pointer-events: none; }
+    .nav-links.open { display: flex; pointer-events: all; }
+    .nav-links a, .nav-links button { font-size: 1.5rem !important; letter-spacing: 0.1em; color: var(--ink) !important; font-family: var(--serif) !important; font-weight: 300 !important; }
+    .nav-links .nav-cta { border: 1px solid var(--green) !important; padding: 0.6rem 2rem !important; color: var(--green) !important; font-family: var(--sans) !important; font-size: 1rem !important; border-radius: 2px; }
+  }
+  @media (min-width: 1025px) {
+    .nav-hamburger { display: none !important; }
+    .nav-links { display: flex !important; position: static !important; background: none !important; flex-direction: row !important; pointer-events: all !important; }
+    .nav-links a, .nav-links button { font-size: 0.77rem !important; font-family: var(--sans) !important; font-weight: 400 !important; }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    nav { padding: 0.75rem 2rem; }
+    .page-header { padding: 8rem 2rem 4rem; }
+    .courses-section { padding: 4rem 2rem; }
+    .courses-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+    .course-card { grid-template-columns: 1fr; }
+    .course-card-left { border-right: none; border-bottom: 1px solid var(--cream-warm); }
+    .curriculum-section { padding: 4rem 2rem; }
+    .curriculum-grid { grid-template-columns: 1fr; }
+    .audience-section { padding: 4rem 2rem; }
+    .audience-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .coming-soon-section { padding: 4rem 2rem; }
+    .cta-band { padding: 4rem 2rem; flex-direction: column; align-items: flex-start; }
+    footer { padding: 2rem; flex-direction: column; gap: 1.5rem; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+
+  @media (max-width: 768px) {
+    html, body { overflow-x: hidden; max-width: 100%; }
+    .page-header { padding: 7rem 1.5rem 3rem; }
+    .courses-section, .curriculum-section, .audience-section, .coming-soon-section { padding: 3rem 1.5rem; }
+    .course-card-left, .course-card-right { padding: 2rem 1.5rem; }
+    .course-details li { grid-template-columns: 1fr; gap: 0.25rem; }
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+  .page-eyebrow { animation: fadeUp 0.6s ease both 0.1s; }
+  .page-title    { animation: fadeUp 0.7s ease both 0.22s; }
+  .page-subtitle { animation: fadeUp 0.6s ease both 0.34s; }
+
+  /* COOKIE CONSENT */
+  .consent-banner { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 999; background: var(--ink); padding: 1.25rem 3rem; box-shadow: 0 -4px 24px rgba(0,0,0,0.2); }
+  .consent-banner.visible { display: block; }
+  .consent-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+  .consent-text { font-family: var(--sans); font-size: 0.82rem; font-weight: 300; color: rgba(237,233,226,0.85); line-height: 1.6; flex: 1; min-width: 260px; }
+  .consent-text strong { color: var(--cream); font-weight: 500; }
+  .consent-buttons { display: flex; gap: 0.75rem; flex-shrink: 0; }
+  .consent-accept { background: var(--green); color: #fff; padding: 0.6rem 1.5rem; border: none; border-radius: 2px; font-family: var(--sans); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; }
+  .consent-accept:hover { background: var(--green-dark); }
+  .consent-decline { background: none; color: rgba(237,233,226,0.55); padding: 0.6rem 1.5rem; border: 1px solid rgba(237,233,226,0.2); border-radius: 2px; font-family: var(--sans); font-size: 0.75rem; cursor: pointer; letter-spacing: 0.1em; text-transform: uppercase; }
+  @media (max-width: 768px) { .consent-banner { padding: 1.25rem 1.5rem; } .consent-inner { flex-direction: column; gap: 1rem; } .consent-buttons { width: 100%; } .consent-accept, .consent-decline { flex: 1; text-align: center; } }
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="nav-logo" href="index.html" onclick="closeAndNavigate('index.html'); return false;">
+    <div>
+      <div class="nav-wordmark">Travelsense <span>Consulting</span></div>
+      <div class="nav-tagline">from all angles</div>
+    </div>
+  </a>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" onclick="closeAndNavigate('index.html'); return false;">Home</a></li>
+    <li><a href="index.html#services" onclick="closeAndNavigate('index.html#services'); return false;">Services</a></li>
+    <li><a href="training.html" class="active">Training</a></li>
+    <li><a href="blog.html" onclick="closeAndNavigate('blog.html'); return false;">Blog</a></li>
+    <li><button onclick="closeAndNavigate('index.html#contact')" class="nav-cta">Get in touch</button></li>
+  </ul>
+</nav>
+
+<!-- ══ PAGE HEADER ══ -->
+<div class="page-header">
+  <p class="page-eyebrow">Professional Development</p>
+  <h1 class="page-title">Training for the<br>travel industry</h1>
+  <p class="page-subtitle">Online courses developed and presented by Travelsense Consulting — built for tour guides, travel agents, and travel SME staff who want to stay ahead.</p>
+</div>
+
+<!-- ══ COURSES ══ -->
+<section class="courses-section" id="courses">
+  <div class="courses-intro">
+    <div>
+      <p class="section-label">Available now</p>
+      <h2 class="courses-intro-title">Our first course<br>is live.</h2>
+    </div>
+    <p class="courses-intro-text">
+      We've developed a practical, research-backed online course on sustainability and customer experience — free to access, with a certificate of attendance upon completion. More courses are in development.
+    </p>
+  </div>
+
+  <!-- ── COURSE CARD ── -->
+  <div class="course-card">
+    <div class="course-card-left">
+      <span class="course-badge">Now available</span>
+      <h3 class="course-title">Sustainability in Tourism and the Customer Experience</h3>
+      <p style="font-family: var(--serif); font-size: 1.05rem; font-style: italic; font-weight: 300; color: var(--ink-muted); margin-bottom: 1.25rem; line-height: 1.4;">An introductory training course for tour guides &amp; travel agents</p>
+      <p class="course-desc">
+        A four-section online course exploring how sustainable tourism practices directly improve the customer experience — and what that means for you in practice. Grounded in the latest research and industry data, with real-world examples throughout.
+      </p>
+      <a href="https://training.travelsenseconsulting.com" target="_blank" rel="noopener" class="course-cta">Go to the course →</a>
+      <span class="course-cta-note">Free to access &nbsp;·&nbsp; Certificate of attendance included &nbsp;·&nbsp; Link valid until 31 December 2026</span>
+    </div>
+    <div class="course-card-right">
+      <ul class="course-details">
+        <li>
+          <span class="detail-label">Duration</span>
+          <span class="detail-value">4 hours (self-paced)</span>
+        </li>
+        <li>
+          <span class="detail-label">Format</span>
+          <span class="detail-value">Online, browser-based — no download required</span>
+        </li>
+        <li>
+          <span class="detail-label">Sections</span>
+          <span class="detail-value">4 sections, each ending with a quiz</span>
+        </li>
+        <li>
+          <span class="detail-label">Assessment</span>
+          <span class="detail-value">4 section quizzes + 4 practical activities</span>
+        </li>
+        <li>
+          <span class="detail-label">Award</span>
+          <span class="detail-value">Certificate of attendance (printable, with unique Certificate ID)</span>
+        </li>
+        <li>
+          <span class="detail-label">Language</span>
+          <span class="detail-value">English</span>
+        </li>
+        <li>
+          <span class="detail-label">Cost</span>
+          <span class="detail-value">Free &nbsp;·&nbsp; Optional voluntary donation to <a href="https://galateas-sanctuary-brochure.vercel.app/" target="_blank" rel="noopener" style="color:var(--green-dark);">Galatea's Animal Sanctuary</a></span>
+        </li>
+        <li>
+          <span class="detail-label">Audience</span>
+          <span class="detail-value">Tour guides, travel agents, aspiring guides, and SME travel operators who want to offer the course to their staff</span>
+        </li>
+        <li>
+          <span class="detail-label">Enrolment</span>
+          <span class="detail-value">Via the course front page — link valid until 31 December 2026</span>
+        </li>
+        <li>
+          <span class="detail-label">Developed by</span>
+          <span class="detail-value">Travelsense Consulting</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CURRICULUM ══ -->
+<section class="curriculum-section">
+  <div class="curriculum-header">
+    <p class="section-label">What you will learn</p>
+    <h2 class="curriculum-title">Four sections. Practical from the start.</h2>
+  </div>
+  <div class="curriculum-grid">
+
+    <div class="curriculum-item">
+      <div class="curriculum-num">01</div>
+      <p class="curriculum-section-label">Section 1 &nbsp;·&nbsp; 60 minutes</p>
+      <h3 class="curriculum-item-title">Introduction to Sustainable Tourism</h3>
+      <p class="curriculum-item-desc">What sustainable tourism actually means, why it matters, and how it connects to your role in the field.</p>
+      <ul class="curriculum-item-topics">
+        <li>Definitions and global frameworks (GSTC, UN Tourism)</li>
+        <li>The three pillars: environment, economy, community</li>
+        <li>Current trends and traveller expectations</li>
+        <li>Your role as a guide or agent</li>
+      </ul>
+    </div>
+
+    <div class="curriculum-item">
+      <div class="curriculum-num">02</div>
+      <p class="curriculum-section-label">Section 2 &nbsp;·&nbsp; 60 minutes</p>
+      <h3 class="curriculum-item-title">Customer Service in Tourism</h3>
+      <p class="curriculum-item-desc">The foundations of excellent customer service — and the common pitfalls that even experienced professionals fall into.</p>
+      <ul class="curriculum-item-topics">
+        <li>What travellers expect in 2025 and beyond</li>
+        <li>Common customer service failures and how to avoid them</li>
+        <li>Communication styles and adapting to your audience</li>
+        <li>Handling complaints and difficult situations</li>
+      </ul>
+    </div>
+
+    <div class="curriculum-item">
+      <div class="curriculum-num">03</div>
+      <p class="curriculum-section-label">Section 3 &nbsp;·&nbsp; 60 minutes</p>
+      <h3 class="curriculum-item-title">Where Sustainability Meets Experience</h3>
+      <p class="curriculum-item-desc">How sustainable practices directly improve the customer experience — through specific touch points you encounter every day.</p>
+      <ul class="curriculum-item-topics">
+        <li>Environmental touch points and guest perception</li>
+        <li>Local destination experience and authenticity</li>
+        <li>Community involvement as a service differentiator</li>
+        <li>Communicating sustainability without preaching</li>
+      </ul>
+    </div>
+
+    <div class="curriculum-item">
+      <div class="curriculum-num">04</div>
+      <p class="curriculum-section-label">Section 4 &nbsp;·&nbsp; 60 minutes</p>
+      <h3 class="curriculum-item-title">Practical Application</h3>
+      <p class="curriculum-item-desc">Real-world scenarios and worked examples — how to put what you've learned into action with actual guests and clients.</p>
+      <ul class="curriculum-item-topics">
+        <li>Addressing each touch point in practice</li>
+        <li>Scripts and language for common situations</li>
+        <li>Building sustainable practice into your daily work</li>
+        <li>Measuring and improving your own performance</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ AUDIENCE ══ -->
+<section class="audience-section">
+  <div class="audience-grid">
+    <div class="audience-left">
+      <p class="section-label">Who it's for</p>
+      <h2 class="audience-title">Built for people who work with travellers every day</h2>
+      <p class="audience-body" style="margin-top:1rem;">
+        Whether you're guiding tours, managing bookings, or running a small travel operation — this course gives you a practical, evidence-based foundation in sustainable customer service that you can apply immediately.
+      </p>
+      <p class="audience-body" style="margin-top:1rem;">
+        SME travel operators can also offer the course directly to their own staff as part of an in-house professional development programme — at no cost.
+      </p>
+    </div>
+    <div class="audience-cards">
+      <div class="audience-card">
+        <div class="audience-card-icon">🧭</div>
+        <div>
+          <h4 class="audience-card-title">Tour guides</h4>
+          <p class="audience-card-text">Experienced or newly qualified — deepen your understanding of sustainable practice and how it shapes the guest experience.</p>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-card-icon">✈️</div>
+        <div>
+          <h4 class="audience-card-title">Travel agents</h4>
+          <p class="audience-card-text">Add a sustainability lens to your client conversations and strengthen your value proposition in a competitive market.</p>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-card-icon">🌱</div>
+        <div>
+          <h4 class="audience-card-title">Aspiring guides</h4>
+          <p class="audience-card-text">Starting out? Build the right foundations from day one — including a certificate to support your professional profile.</p>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-card-icon">🏢</div>
+        <div>
+          <h4 class="audience-card-title">SME travel operators</h4>
+          <p class="audience-card-text">Offer this course to your team as a staff development resource — free to use, professionally developed, certificate included.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ COMING SOON ══ -->
+<section class="coming-soon-section">
+  <div class="coming-soon-inner">
+    <p class="section-label">In development</p>
+    <h2 class="coming-soon-title">More courses coming in 2027</h2>
+    <p class="coming-soon-body">
+      We are developing a further series of short courses for travel industry professionals — covering areas where SMEs most often need practical, affordable training. Topics under development include:
+    </p>
+    <div class="coming-soon-tags">
+      <span class="tag">Merging CRM &amp; Customer Data</span>
+      <span class="tag">Risk Management &amp; Complaint Handling</span>
+      <span class="tag">Accessible Tourism in Practice</span>
+    </div>
+    <p style="font-size:0.85rem; color:var(--ink-muted); margin-top:1.5rem; font-weight:300; font-style:italic;">
+      For more information contact <a href="mailto:training@travelsenseconsulting.com" style="color:var(--green-dark);">training@travelsenseconsulting.com</a>
+    </p>
+  </div>
+</section>
+
+<!-- ══ CTA BAND ══ -->
+<section class="cta-band">
+  <h2 class="cta-band-title">
+    Ready to support your team<br><em>from all angles?</em>
+  </h2>
+  <a href="index.html#contact" class="btn-white" onclick="closeAndNavigate('index.html#contact'); return false;">Get in touch</a>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-brand">
+    <div>
+      <div class="footer-wordmark">Travelsense <span>Consulting</span></div>
+      <div class="footer-tagline">from all angles</div>
+    </div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="training.html">Training</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><button class="footer-contact-btn" onclick="closeAndNavigate('index.html#contact')">Contact</button></li>
+  </ul>
+</footer>
+
+<!-- COOKIE CONSENT -->
+<div class="consent-banner" id="consentBanner">
+  <div class="consent-inner">
+    <p class="consent-text"><strong>We use cookies.</strong> We use Google Analytics to understand how visitors use our site. No personal data is shared with third parties for advertising. By clicking "Agree" you consent to our use of analytics cookies in accordance with the EU GDPR.</p>
+    <div class="consent-buttons">
+      <button class="consent-accept" onclick="acceptConsent()">Agree</button>
+      <button class="consent-decline" onclick="declineConsent()">Not Agree</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    var nav = document.getElementById('navLinks');
+    var btn = document.querySelector('.nav-hamburger');
+    nav.classList.toggle('open');
+    btn.classList.toggle('open');
+    document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+  }
+  function closeAndNavigate(url) {
+    var nav = document.getElementById('navLinks');
+    var btn = document.querySelector('.nav-hamburger');
+    nav.classList.remove('open');
+    btn.classList.remove('open');
+    document.body.style.overflow = '';
+    window.location.href = url;
+  }
+  (function() {
+    if (!localStorage.getItem('cookieConsent')) {
+      document.getElementById('consentBanner').classList.add('visible');
+    } else if (localStorage.getItem('cookieConsent') === 'accepted') {
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    }
+  })();
+  function acceptConsent() { localStorage.setItem('cookieConsent', 'accepted'); gtag('consent', 'update', { 'analytics_storage': 'granted' }); document.getElementById('consentBanner').classList.remove('visible'); }
+  function declineConsent() { localStorage.setItem('cookieConsent', 'declined'); gtag('consent', 'update', { 'analytics_storage': 'denied' }); document.getElementById('consentBanner').classList.remove('visible'); }
+</script>
+
+</body>
+</html>
