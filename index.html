@@ -52,7 +52,8 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --hero-slogan: 2.25rem; /* title = slogan + 1pt, kept at or below logo size (2.4rem) */
+    --logo-size: 2.4rem; /* logo wordmark size; all main headings use this */
+    --hero-slogan: calc(var(--logo-size) - 1pt); /* hero title = slogan + 1pt = logo size */
     --ink: #1a1814;
     --ink-muted: #6b6760;
     --ink-faint: #b8b5b0;
@@ -88,7 +89,7 @@
   .nav-logo { display: flex; align-items: center; gap: 0.3rem; text-decoration: none; }
 
   .nav-wordmark {
-    font-family: var(--serif); font-size: 2.4rem;
+    font-family: var(--serif); font-size: var(--logo-size);
     font-weight: 500; letter-spacing: 0.05em; color: var(--ink); line-height: 1;
   }
   .nav-wordmark span { color: var(--green); }
@@ -134,13 +135,13 @@
     font-size: 0.88rem; font-weight: 500; letter-spacing: 0.18em;
     text-transform: uppercase; color: var(--green); margin-bottom: 1.5rem;
     display: flex; align-items: center; gap: 0.75rem;
-    margin-left: -4rem; margin-top: 4rem;
+    margin-left: 0; margin-top: 4rem;
   }
   .hero-eyebrow::before { content:''; display:block; width:28px; height:1px; background:var(--green); }
 
   .hero-title {
     font-family: var(--serif); font-size: calc(var(--hero-slogan) + 1pt);
-    font-weight: 700; line-height: 1.1; color: var(--ink); margin-bottom: 0.4rem;
+    font-weight: 300; line-height: 1.1; color: var(--ink); margin-bottom: 0.4rem;
     white-space: nowrap;
   }
 
@@ -373,6 +374,8 @@
     nav { padding: 1.1rem 2rem; }
     .nav-links { display: none; }
     .hero { padding: 0; }
+    .hero-row { padding-left: 2rem !important; padding-right: 2rem !important; }
+    .hero-stats { margin-left: 2rem !important; margin-right: 2rem !important; }
     .hero-stats { gap: 0; }
     .hero-stats .stat { padding: 1.5rem 2rem 1.5rem 0; margin-right: 2rem; }
     .services { padding: 5rem 2rem; }
@@ -592,7 +595,7 @@
   .nav-hamburger.open span:nth-child(2) { opacity: 0; }
   .nav-hamburger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1280px) {
     .nav-hamburger { display: flex; }
     .nav-links {
       display: none !important;
@@ -646,7 +649,7 @@
       flex-wrap: wrap;
     }
     .hero-title { line-height: 1.1 !important; }
-    :root { --hero-slogan: 1.3rem; }
+    :root { --logo-size: 1.5rem; }
     @media (max-width: 360px) { :root { --hero-slogan: 1.1rem; } }
     .hero-slogan { margin-bottom: 1.25rem !important; }
     .hero-subtitle {
@@ -698,6 +701,11 @@
     .footer-wordmark { font-size: 1.6rem !important; }
     .footer-tagline { font-size: 1.1rem !important; }
   }
+
+  /* Main headings = logo size (same font and weight as before, size only) */
+  .services-title, .why-title, .process-title, .cta-band-title { font-size: var(--logo-size); }
+  /* Hero intro: labels use the same weight as the surrounding text */
+  .hero-subtitle strong { font-weight: inherit; }
 </style>
 <!-- Vercel Web Analytics -->
 <script>
@@ -730,7 +738,7 @@
 
 <!-- ══ HERO ══ -->
 <section class="hero">
-  <div style="display:flex; align-items:center; justify-content:flex-start; padding:10rem 4rem 0 8rem; gap:1rem; flex-wrap:nowrap; max-width:100%; box-sizing:border-box;">
+  <div class="hero-row" style="display:flex; align-items:center; justify-content:flex-start; padding:10rem 4rem 0 4rem; gap:1rem; flex-wrap:nowrap; max-width:100%; box-sizing:border-box;">
     <div class="hero-inner">
     <p class="hero-eyebrow">Remote support for travel and tourism SMEs</p>
     <h1 class="hero-title">Your business seen clearly</h1>
@@ -738,13 +746,13 @@
     <p class="hero-subtitle">
       Travelsense Consulting supports travel-related enterprises through two complementary channels of service:
     </p>
-    <p class="hero-subtitle" style="margin-top:0.9rem;">
+    <p class="hero-subtitle" style="margin-top:0;">
       <strong>Strategic Consulting</strong> – Providing guidance on business strategy and sustainable best practices to help travel businesses strengthen their market presence and achieve long-term growth.
     </p>
-    <p class="hero-subtitle" style="margin-top:0.9rem;">
+    <p class="hero-subtitle" style="margin-top:0;">
       <strong>Operational Support</strong> – Delivering remote administration, market and brand positioning, and customer service optimisation to streamline day-to-day activities and improve efficiency.
     </p>
-    <p class="hero-subtitle" style="margin-top:0.9rem;">
+    <p class="hero-subtitle" style="margin-top:0;">
       Together, these services empower small and medium-sized travel enterprises to focus on what matters most: growing their business and delivering exceptional travel experiences and products.
     </p>
     </div>
@@ -1151,7 +1159,7 @@
 
     </div>
   </div>
-  <div class="hero-stats" style="margin:0 8rem;">
+  <div class="hero-stats" style="margin:0 4rem;">
     <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Remote delivery</div></div>
     <div class="stat"><div class="stat-num">3</div><div class="stat-label">Core service pillars</div></div>
     <div class="stat"><div class="stat-num">SME</div><div class="stat-label">Travel specialists</div></div>

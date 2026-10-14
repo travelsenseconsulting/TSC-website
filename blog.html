@@ -18,6 +18,7 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
+    --logo-size: 2.4rem; /* logo wordmark size; all main headings use this */
     --ink: #1a1814;
     --ink-muted: #6b6760;
     --ink-faint: #b8b5b0;
@@ -51,7 +52,7 @@
   .nav-logo { display: flex; align-items: center; gap: 0.3rem; text-decoration: none; }
 
   .nav-wordmark {
-    font-family: var(--serif); font-size: 2.4rem;
+    font-family: var(--serif); font-size: var(--logo-size);
     font-weight: 500; letter-spacing: 0.05em; color: var(--ink); line-height: 1;
   }
   .nav-wordmark span { color: var(--green); }
@@ -301,7 +302,7 @@
   .nav-hamburger.open span:nth-child(2) { opacity: 0; }
   .nav-hamburger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1280px) {
     .nav-hamburger { display: flex; }
     .nav-links {
       display: none;
@@ -314,10 +315,21 @@
     .nav-links a, .nav-links button { font-size: 1.5rem !important; letter-spacing: 0.1em; color: var(--ink) !important; font-family: var(--serif) !important; font-weight: 300 !important; }
     .nav-links .nav-cta { border: 1px solid var(--green) !important; padding: 0.6rem 2rem !important; color: var(--green) !important; font-family: var(--sans) !important; font-size: 1rem !important; border-radius: 2px; }
   }
-  @media (min-width: 1025px) {
+  @media (min-width: 1281px) {
     .nav-hamburger { display: none !important; }
     .nav-links { display: flex !important; position: static !important; background: none !important; flex-direction: row !important; pointer-events: all !important; }
     .nav-links a, .nav-links button { font-size: 0.77rem !important; font-family: var(--sans) !important; font-weight: 400 !important; }
+  }
+
+  /* Main headings = logo size (same font and weight as before, size only) */
+  .page-title, .cta-band-title { font-size: var(--logo-size); }
+  /* Phone size: logo and main headings shrink together (matches homepage) */
+  @media (max-width: 768px) { :root { --logo-size: 1.5rem; } }
+  /* Longer nav on this page: tighten spacing so it stays on one row just above the hamburger breakpoint */
+  .nav-wordmark, .nav-links a, .nav-links button { white-space: nowrap; }
+  @media (min-width: 1281px) and (max-width: 1440px) {
+    nav { padding-left: 2rem; padding-right: 2rem; }
+    .nav-links { gap: 1.4rem; }
   }
 </style>
 
@@ -359,6 +371,7 @@
     <li><a href="index.html#services" onclick="closeAndNavigate('index.html#services'); return false;">Services</a></li>
     <li><a href="index.html#why" onclick="closeAndNavigate('index.html#why'); return false;">Why us</a></li>
     <li><a href="property-management.html" onclick="closeAndNavigate('property-management.html'); return false;">Property Management</a></li>
+    <li><a href="training.html" onclick="closeAndNavigate('training.html'); return false;">Training</a></li>
     <li><a href="blog.html" class="active">Blog</a></li>
     <li><button onclick="closeAndNavigate('index.html#contact')" class="nav-cta">Get in touch</button></li>
   </ul>

@@ -28,6 +28,7 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
+    --logo-size: 2.4rem; /* logo wordmark size; all main headings use this */
     --ink: #1a1814;
     --ink-muted: #6b6760;
     --ink-faint: #b8b5b0;
@@ -52,7 +53,7 @@
     border-bottom: 1px solid rgba(184,180,176,0.2);
   }
   .nav-logo { display: flex; align-items: center; gap: 0.3rem; text-decoration: none; }
-  .nav-wordmark { font-family: var(--serif); font-size: 2.4rem; font-weight: 500; letter-spacing: 0.05em; color: var(--ink); line-height: 1; }
+  .nav-wordmark { font-family: var(--serif); font-size: var(--logo-size); font-weight: 500; letter-spacing: 0.05em; color: var(--ink); line-height: 1; }
   .nav-wordmark span { color: var(--green); }
   .nav-tagline { font-family: var(--serif); font-size: 1.55rem; color: var(--green); letter-spacing: 0.02em; font-style: italic; font-weight: 300; margin-top: 0.2rem; }
 
@@ -70,7 +71,7 @@
 
   /* ── PAGE HEADER ── */
   .page-header {
-    padding: 9rem 8rem 5rem;
+    padding: 8rem 6rem 2.5rem;
     background: var(--ink);
     position: relative; overflow: hidden;
   }
@@ -118,11 +119,11 @@
   .section-label::before { content: ''; display: block; width: 22px; height: 1px; background: var(--green); }
 
   /* ── COURSE CARD ── */
-  .courses-section { padding: 6rem 8rem; }
+  .courses-section { padding: 3rem 6rem; }
 
   .courses-intro {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 4rem; margin-bottom: 4rem; align-items: end;
+    display: grid; grid-template-columns: 1fr;
+    gap: 0.75rem; margin-bottom: 1.75rem;
   }
 
   .courses-intro-title {
@@ -130,7 +131,7 @@
     font-weight: 300; line-height: 1.1; color: var(--ink);
   }
 
-  .courses-intro-text { font-size: 0.97rem; font-weight: 300; color: var(--ink-muted); line-height: 1.8; }
+  .courses-intro-text { max-width: 760px; font-size: 0.97rem; font-weight: 300; color: var(--ink-muted); line-height: 1.8; }
 
   /* Single course card — full width, prominent */
   .course-card {
@@ -143,8 +144,8 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .course-card-left { padding: 3rem 3.5rem; border-right: 1px solid var(--cream-warm); }
-  .course-card-right { padding: 3rem 3.5rem; background: var(--cream); }
+  .course-card-left { padding: 2rem 2.5rem; border-right: 1px solid var(--cream-warm); }
+  .course-card-right { padding: 2rem 2.5rem; background: var(--cream); }
 
   .course-badge {
     display: inline-flex; align-items: center; gap: 0.5rem;
@@ -162,7 +163,7 @@
 
   .course-desc {
     font-size: 0.92rem; font-weight: 300; color: var(--ink-muted);
-    line-height: 1.8; margin-bottom: 2rem;
+    line-height: 1.8; margin-bottom: 1.25rem;
   }
 
   .course-cta {
@@ -186,7 +187,7 @@
 
   .course-details li {
     display: grid; grid-template-columns: 140px 1fr;
-    gap: 1rem; padding: 0.85rem 0;
+    gap: 1rem; padding: 0.55rem 0;
     border-bottom: 1px solid var(--cream-warm);
     font-size: 0.85rem;
   }
@@ -200,15 +201,15 @@
   .detail-value { font-weight: 300; color: var(--ink-muted); line-height: 1.6; }
 
   /* Curriculum preview */
-  .curriculum-section { padding: 5rem 8rem; background: var(--cream-warm); }
+  .curriculum-section { padding: 3rem 6rem; background: var(--cream-warm); }
 
-  .curriculum-header { max-width: 560px; margin-bottom: 3rem; }
+  .curriculum-header { max-width: 560px; margin-bottom: 1.75rem; }
   .curriculum-title { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.75rem); font-weight: 300; color: var(--ink); line-height: 1.1; margin-top: 0.5rem; }
 
-  .curriculum-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .curriculum-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 
   .curriculum-item {
-    background: #fff; padding: 2rem 2.25rem;
+    background: #fff; padding: 1.4rem 1.75rem;
     border-radius: 2px; border-left: 3px solid var(--green);
     position: relative;
   }
@@ -232,9 +233,9 @@
   .curriculum-item-topics li::before { content: ''; display: block; width: 10px; height: 1px; background: var(--green); flex-shrink: 0; margin-top: 0.55rem; }
 
   /* Who is it for */
-  .audience-section { padding: 5rem 8rem; background: var(--cream); }
+  .audience-section { padding: 3rem 6rem; background: var(--cream); }
 
-  .audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+  .audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-top: 1.5rem; }
 
   .audience-left {}
 
@@ -253,7 +254,7 @@
   .audience-card-text { font-size: 0.82rem; font-weight: 300; color: var(--ink-muted); line-height: 1.65; }
 
   /* Coming soon */
-  .coming-soon-section { padding: 5rem 8rem; background: var(--cream-warm); }
+  .coming-soon-section { padding: 3rem 6rem; background: var(--cream-warm); }
   .coming-soon-inner { max-width: 680px; }
   .coming-soon-title { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 300; color: var(--ink); line-height: 1.15; margin-top: 0.5rem; margin-bottom: 1.25rem; }
   .coming-soon-body { font-size: 0.95rem; font-weight: 300; color: var(--ink-muted); line-height: 1.8; margin-bottom: 2rem; }
@@ -266,7 +267,7 @@
   }
 
   /* CTA BAND */
-  .cta-band { background: var(--green-dark); padding: 5rem 8rem; display: flex; align-items: center; justify-content: space-between; gap: 3rem; position: relative; overflow: hidden; }
+  .cta-band { background: var(--green-dark); padding: 3rem 6rem; display: flex; align-items: center; justify-content: space-between; gap: 3rem; position: relative; overflow: hidden; }
   .cta-band::before { content: ''; position: absolute; right: -60px; top: -60px; width: 300px; height: 300px; background: rgba(255,255,255,0.07); clip-path: polygon(50% 0%, 100% 100%, 0% 100%); transform: rotate(15deg); }
   .cta-band::after { content: ''; position: absolute; right: 100px; bottom: -80px; width: 200px; height: 200px; background: rgba(255,255,255,0.04); clip-path: polygon(50% 0%, 100% 100%, 0% 100%); transform: rotate(-8deg); }
   .cta-band-title { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.75rem); font-weight: 300; color: #fff; max-width: 560px; line-height: 1.15; position: relative; z-index: 1; }
@@ -287,14 +288,14 @@
   .footer-contact-btn:hover { color: var(--cream); }
 
   /* MOBILE NAV */
-  @media (max-width: 1024px) {
+  @media (max-width: 1280px) {
     .nav-hamburger { display: flex; }
     .nav-links { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--cream); z-index: 150; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; padding: 2rem; pointer-events: none; }
     .nav-links.open { display: flex; pointer-events: all; }
     .nav-links a, .nav-links button { font-size: 1.5rem !important; letter-spacing: 0.1em; color: var(--ink) !important; font-family: var(--serif) !important; font-weight: 300 !important; }
     .nav-links .nav-cta { border: 1px solid var(--green) !important; padding: 0.6rem 2rem !important; color: var(--green) !important; font-family: var(--sans) !important; font-size: 1rem !important; border-radius: 2px; }
   }
-  @media (min-width: 1025px) {
+  @media (min-width: 1281px) {
     .nav-hamburger { display: none !important; }
     .nav-links { display: flex !important; position: static !important; background: none !important; flex-direction: row !important; pointer-events: all !important; }
     .nav-links a, .nav-links button { font-size: 0.77rem !important; font-family: var(--sans) !important; font-weight: 400 !important; }
@@ -303,26 +304,26 @@
   /* RESPONSIVE */
   @media (max-width: 1024px) {
     nav { padding: 0.75rem 2rem; }
-    .page-header { padding: 8rem 2rem 4rem; }
-    .courses-section { padding: 4rem 2rem; }
-    .courses-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+    .page-header { padding: 8rem 2rem 2rem; }
+    .courses-section { padding: 2.5rem 2rem; }
+    .courses-intro { grid-template-columns: 1fr; gap: 1rem; }
     .course-card { grid-template-columns: 1fr; }
     .course-card-left { border-right: none; border-bottom: 1px solid var(--cream-warm); }
-    .curriculum-section { padding: 4rem 2rem; }
+    .curriculum-section { padding: 2.5rem 2rem; }
     .curriculum-grid { grid-template-columns: 1fr; }
-    .audience-section { padding: 4rem 2rem; }
+    .audience-section { padding: 2.5rem 2rem; }
     .audience-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .coming-soon-section { padding: 4rem 2rem; }
-    .cta-band { padding: 4rem 2rem; flex-direction: column; align-items: flex-start; }
+    .coming-soon-section { padding: 2.5rem 2rem; }
+    .cta-band { padding: 2.5rem 2rem; flex-direction: column; align-items: flex-start; }
     footer { padding: 2rem; flex-direction: column; gap: 1.5rem; text-align: center; }
     .footer-links { flex-wrap: wrap; justify-content: center; }
   }
 
   @media (max-width: 768px) {
     html, body { overflow-x: hidden; max-width: 100%; }
-    .page-header { padding: 7rem 1.5rem 3rem; }
-    .courses-section, .curriculum-section, .audience-section, .coming-soon-section { padding: 3rem 1.5rem; }
-    .course-card-left, .course-card-right { padding: 2rem 1.5rem; }
+    .page-header { padding: 7rem 1.5rem 2rem; }
+    .courses-section, .curriculum-section, .audience-section, .coming-soon-section { padding: 2rem 1.5rem; }
+    .course-card-left, .course-card-right { padding: 1.5rem; }
     .course-details li { grid-template-columns: 1fr; gap: 0.25rem; }
   }
 
@@ -343,6 +344,20 @@
   .consent-accept:hover { background: var(--green-dark); }
   .consent-decline { background: none; color: rgba(237,233,226,0.55); padding: 0.6rem 1.5rem; border: 1px solid rgba(237,233,226,0.2); border-radius: 2px; font-family: var(--sans); font-size: 0.75rem; cursor: pointer; letter-spacing: 0.1em; text-transform: uppercase; }
   @media (max-width: 768px) { .consent-banner { padding: 1.25rem 1.5rem; } .consent-inner { flex-direction: column; gap: 1rem; } .consent-buttons { width: 100%; } .consent-accept, .consent-decline { flex: 1; text-align: center; } }
+
+  /* Main headings = logo size (same font and weight as before, size only) */
+  .page-title, .courses-intro-title, .curriculum-title, .audience-title, .coming-soon-title, .cta-band-title { font-size: var(--logo-size); }
+  /* Phone size: logo and main headings shrink together (matches homepage) */
+  @media (max-width: 768px) { :root { --logo-size: 1.5rem; } }
+  /* Header: one-line title; intro paragraph takes the same width as the title */
+  .page-header-text { position: relative; z-index: 1; width: max-content; max-width: 100%; }
+  .page-header-text .page-title { white-space: nowrap; }
+  .page-header-text .page-subtitle { width: 0; min-width: 100%; max-width: none; }
+  @media (max-width: 768px) {
+    .page-header-text { width: auto; }
+    .page-header-text .page-title { white-space: normal; }
+    .page-header-text .page-subtitle { width: auto; min-width: 0; }
+  }
 </style>
 </head>
 <body>
@@ -370,8 +385,10 @@
 <!-- ══ PAGE HEADER ══ -->
 <div class="page-header">
   <p class="page-eyebrow">Professional Development</p>
-  <h1 class="page-title">Training for the<br>travel industry</h1>
-  <p class="page-subtitle">Online courses developed and presented by Travelsense Consulting — built for tour guides, travel agents, and travel SME staff who want to stay ahead.</p>
+  <div class="page-header-text">
+    <h1 class="page-title">Training for the travel industry</h1>
+    <p class="page-subtitle">Online courses developed and presented by Travelsense Consulting — built for tour guides, travel agents, and travel SME staff who want to stay ahead.</p>
+  </div>
 </div>
 
 <!-- ══ COURSES ══ -->
@@ -379,7 +396,7 @@
   <div class="courses-intro">
     <div>
       <p class="section-label">Available now</p>
-      <h2 class="courses-intro-title">Our first course<br>is live.</h2>
+      <h2 class="courses-intro-title">Our first course is live.</h2>
     </div>
     <p class="courses-intro-text">
       We've developed a practical, research-backed online course on sustainability and customer experience — free to access, with a certificate of attendance upon completion. More courses are in development.
@@ -449,7 +466,7 @@
 <section class="curriculum-section">
   <div class="curriculum-header">
     <p class="section-label">What you will learn</p>
-    <h2 class="curriculum-title">Four sections. Practical from the start.</h2>
+    <h2 class="curriculum-title">Four sections.<br>Practical from the start.</h2>
   </div>
   <div class="curriculum-grid">
 
